@@ -20,15 +20,33 @@
 }
 
 body {
-  margin: 50px;
+  margin: 40px;
 }
 
-p, a {
+.top {
+  padding: 30px;
+
+}
+
+a {
   margin: 30px;
   font-size: 13px
 }
 
-p, submit_box {
+.comment {
+  margin-left: 30px;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 13px;
+}
+
+.submit_box p {
   margin: 0;
 }
 
@@ -45,7 +63,7 @@ tr, td, th {
   padding: 3px;
 }
 
-th, h1, h3 {
+th, h1, h3, h4 {
   font-weight: bold;
 }
 
@@ -53,3 +71,4 @@ h3 {
   padding-top: 30px;
   padding-bottom: 10px
 }
+
