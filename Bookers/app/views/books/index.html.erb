@@ -1,9 +1,28 @@
-<head>
-  <title>WebCampBackendNew</title>
-</head>
-<body>
-  <h2>ようこそBookersへ！</h2>
-  <p>Bookersではさまざまな書籍に関するあなたの意見や</p>
-  <p>印象を共有し交換することができます</p>
-  <a href="">start</a>
-</body>
+<h1>Books</h1>
+ 
+<table>
+<tr>
+  <th>Title</th>
+  <th>Body</th> 
+</tr>
+
+<% @bookall.each do |book| %>
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.body %></td>
+  </tr>
+<% end %>
+</table>
+
+<h3>New book</h3>
+<%= form_with model:@book, local:true do |f| %>
+
+<div class="submit_box">
+  <p>Title</p>
+  <%= f.text_field :title %>
+  <p>Body</p>
+  <%= f.text_area :body %>
+</div>  
+  <br><%= f.submit 'Create Book' %>
+
+<% end %>
