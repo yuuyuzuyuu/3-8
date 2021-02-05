@@ -18,14 +18,15 @@
 </table>
 
 <h3>New book</h3>
+
+
+
 <%= form_with model:@book, local:true do |f| %>
 
-<div class="submit_box">
+  <div class="submit_box">
   <p>Title</p>
   <%= f.text_field :title %>
   <p>Body</p>
   <%= f.text_area :body %>
-</div>  
-  <br><%= f.submit 'Create Book' %>
-
+  <br><%= f.submit 'Create Book' %></div>
 <% end %>
