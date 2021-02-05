@@ -16,7 +16,9 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     if book.save
       redirect_to book_path(book.id), notice: 'Book was successfully created.'
-    else render :new
+    else
+      books = Book.all
+      render action: :index
     end
   end
 
